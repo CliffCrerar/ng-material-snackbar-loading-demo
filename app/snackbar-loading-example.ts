@@ -11,6 +11,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['snackbar-loading-example.css'],
 })
 export class SnackbarLoadingExample {
+  icons: string[] = ['sync','donut_large','settings_backup_restore','replay','sentiment_satisfied_alt','gps_fixed','sentiment_satisfied_alt','refresh','data_usage','rotate_right','rotate_left','']
+  selected = 0;
+
   constructor(private _snackBar: MatSnackBar) {}
 
   openSnackBar() {
@@ -27,8 +30,7 @@ export class SnackbarLoadingExample {
     template: `
     <div>
       
-    </div>`,
-    style: [``] 
+    </div>`
   })
   export class LoadingSnackBar{}
 
