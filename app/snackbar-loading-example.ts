@@ -15,7 +15,6 @@ export class SnackbarLoadingExample {
   selected = 0;
 
   constructor(private _snackBar: MatSnackBar) {}
-
   openSnackBar() {
     const message = "Updating"
     const action = "go away"
