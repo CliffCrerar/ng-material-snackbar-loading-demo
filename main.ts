@@ -8,8 +8,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
-
-import {SnackBarOverviewExample} from './app/snack-bar-overview-example';
+import {SnackbarLoadingExample} from './app/snackbar-loading-example';
 
 @NgModule({
   imports: [
@@ -21,9 +20,9 @@ import {SnackBarOverviewExample} from './app/snack-bar-overview-example';
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [SnackBarOverviewExample],
-  declarations: [SnackBarOverviewExample],
-  bootstrap: [SnackBarOverviewExample],
+  entryComponents: [SnackbarLoadingExample],
+  declarations: [SnackbarLoadingExample],
+  bootstrap: [SnackbarLoadingExample],
   providers: []
 })
 export class AppModule {}
