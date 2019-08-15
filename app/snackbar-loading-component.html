@@ -6,6 +6,8 @@
   <input matInput value="Dance" placeholder="Action" #action>
 </mat-form-field> -->
 
+<h2>Select a spinner</h2>
+
 <mat-grid-list cols="4" rowHeight="2:1">
 	<mat-radio-group>
 		<mat-grid-tile *ngFor="let icon of icons">
@@ -18,7 +20,9 @@
 	</mat-radio-group>
 </mat-grid-list>
 
-<button style="margin-top: 100px" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
+<!-- <h4>selected spinner: {{}}</h4> -->
+
+<button style="margin-top: 1vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
 
 <button style="margin-top: 100px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading-bar</button>
 
