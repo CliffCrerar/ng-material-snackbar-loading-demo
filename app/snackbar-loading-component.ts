@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
-import {SnackbarLoadingService} 'app/snackbar-loading.service'
+import {SnackbarLoadingService} from './snackbar-loading.service'
 /**
  * @title Basic snack-bar
  */
