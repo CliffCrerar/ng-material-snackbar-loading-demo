@@ -18,17 +18,14 @@ export class SnackbarLoadingExample {
   openNormalSnackBar() {
     const message = "Updating"
     const action = "go away"
-    this._snackBar.open(message, action, {
-      //duration: 2000,
-    });
+    this._snackBar.open(message, action, {/*duration: 2000,*/});
   }
 
   openLoadingSnackBar(){
     const message = "Updating"
     const action = "go away"
-    this._snackBar.open(message, action, {
-      //duration: 2000,
-    });
+
+    this._snackBar.openWithComponent(new LoadingSnackBar, {/*duration: 2000*/});
   }
 
   onRadioChange(event) {
@@ -41,10 +38,13 @@ export class SnackbarLoadingExample {
   selector: `snackbar-loading`,
   template: `
     <div>
-      <mat-icon></mat-icon>
+
+      <mat-icon></mat-icon>{{message}}
     </div>`
 })
-export class LoadingSnackBar { }
+export class LoadingSnackBar { 
+  message;
+}
 
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.
