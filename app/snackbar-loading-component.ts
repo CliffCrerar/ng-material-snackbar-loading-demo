@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
-
+import {SnackbarLoadingService} 'app/snackbar-loading.service'
 /**
  * @title Basic snack-bar
  */
@@ -14,7 +14,10 @@ export class SnackbarLoadingComponent {
   icons: string[] = ['sync', 'donut_large', 'settings_backup_restore', 'replay', 'sentiment_satisfied_alt', 'gps_fixed', 'gps_not_fixed', 'refresh', 'data_usage', 'rotate_right', 'rotate_left', 'filter_tilt_shift']
   selected: string;
 
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(
+    private _snackBar: MatSnackBar,
+    private loadingService: SnackbarLoadingService
+    ) { }
 
   openNormalSnackBar() {
     const message = "Updating"

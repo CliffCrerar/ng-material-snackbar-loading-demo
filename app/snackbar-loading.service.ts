@@ -6,6 +6,6 @@ import {SnackBarLoadingModel} from './snackbar.loading.model';
 export class SnackbarLoadingService {
   
   constructor(private SnackBarDefinition: SnackBarLoadingModel){
-    
+    console.log(this.SnackBarDefinition)
   }
 }
