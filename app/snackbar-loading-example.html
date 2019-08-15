@@ -6,23 +6,17 @@
   <input matInput value="Dance" placeholder="Action" #action>
 </mat-form-field> -->
 
-<style>
-</style>
-
-
 <mat-grid-list cols="4" rowHeight="2:1">
-	<mat-radio-group formControlName="floatLabel">
+	<mat-radio-group>
 		<mat-grid-tile *ngFor="let icon of icons">
-      <mat-card>
-			<mat-radio-button value="{{icon}}">
-				<mat-icon>{{icon}}</mat-icon>
-			</mat-radio-button>
-      </mat-card>
+			<mat-card>
+				<mat-radio-button value="{{icon}}" (change)="onRadioChange($event)">
+					<mat-icon>{{icon}}</mat-icon>
+				</mat-radio-button>
+			</mat-card>
 		</mat-grid-tile>
 	</mat-radio-group>
 </mat-grid-list>
-
-<br>
 
 <button style="margin-top: 100px" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
 

@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
 
 /**
@@ -11,27 +11,40 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['snackbar-loading-example.css'],
 })
 export class SnackbarLoadingExample {
-  icons: string[] = ['sync','donut_large','settings_backup_restore','replay','sentiment_satisfied_alt','gps_fixed','gps_not_fixed','refresh','data_usage','rotate_right','rotate_left','filter_tilt_shift']
-  selected = 0;
+  icons: string[] = ['sync', 'donut_large', 'settings_backup_restore', 'replay', 'sentiment_satisfied_alt', 'gps_fixed', 'gps_not_fixed', 'refresh', 'data_usage', 'rotate_right', 'rotate_left', 'filter_tilt_shift']
+  selected: string;
 
-  constructor(private _snackBar: MatSnackBar) {}
-  openSnackBar() {
+  constructor(private _snackBar: MatSnackBar) { }
+  openNormalSnackBar() {
     const message = "Updating"
     const action = "go away"
     this._snackBar.open(message, action, {
       //duration: 2000,
     });
   }
+
+  openLoadingSnackBar(){
+    const message = "Updating"
+    const action = "go away"
+    this._snackBar.open(message, action, {
+      //duration: 2000,
+    });
+  }
+
+  onRadioChange(event) {
+    console.log(event.value);
+  }
+
 }
 
-  @Component({
-    selector: `snackbar-loading`,
-    template: `
+@Component({
+  selector: `snackbar-loading`,
+  template: `
     <div>
-      
+      <mat-icon></mat-icon>
     </div>`
-  })
-  export class LoadingSnackBar{}
+})
+export class LoadingSnackBar { }
 
 
 /**  Copyright 2019 Google Inc. All Rights Reserved.

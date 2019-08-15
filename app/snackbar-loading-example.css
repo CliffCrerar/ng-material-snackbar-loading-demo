@@ -5,10 +5,6 @@ body{
   background: blue !important;
 }
 
-mat-form-field {
-  margin-right: 12px;
-}
-
 	.loading-spin {
 		animation: spinning 2s linear infinite;
 	}
