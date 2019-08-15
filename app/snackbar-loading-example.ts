@@ -31,7 +31,6 @@ export class SnackbarLoadingExample {
 
   onRadioChange(event) {
     console.log(event.value);
-    
   }
 
 }
@@ -40,7 +39,6 @@ export class SnackbarLoadingExample {
   selector: `snackbar-loading`,
   template: `
     <div>
-
       <mat-icon class="loading-spin">sync</mat-icon>{{message}}
     </div>`,
     styleUrls:['snackbar-loading-example.css']
