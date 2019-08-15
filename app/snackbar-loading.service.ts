@@ -1,6 +1,6 @@
 
 import {Injectable} from '@angular/core';
-import {}
+import {SnackBarLoadingModel} from './snackbar.loading.model';
 
 @Injectable()
 export class SnackbarLoadingComponent {

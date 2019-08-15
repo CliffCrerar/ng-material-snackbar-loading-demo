@@ -1,4 +1,4 @@
-export class SnackBarConfigModel {
+export class SnackBarLoadingModel {
   constructor(
     // Angular mandatory snackbar properties
     public announcementMessage: string,
