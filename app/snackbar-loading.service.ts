@@ -4,5 +4,8 @@ import {SnackBarLoadingModel} from './snackbar.loading.model';
 
 @Injectable()
 export class SnackbarLoadingComponent {
-  constructor(){}
+  SnackBarDefinition: SnackBarLoadingModel;
+  constructor(){
+    
+  }
 }
