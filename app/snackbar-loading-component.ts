@@ -17,7 +17,10 @@ export class SnackbarLoadingComponent {
   constructor(
     private _snackBar: MatSnackBar,
     private loadingService: SnackbarLoadingService
-    ) { }
+    ) { 
+      console.log(loadingService)
+      this.loadingService.iconNames = this.icons;
+    }
 
   openNormalSnackBar() {
     const message = "Updating"
@@ -48,6 +51,9 @@ export class SnackbarLoadingComponent {
 })
 export class LoadingSnackBar { 
   message = 'message';
+  constructor(private loadingService: SnackbarLoadingService){
+    console.log(loadingService)
+  }
 }
 
 

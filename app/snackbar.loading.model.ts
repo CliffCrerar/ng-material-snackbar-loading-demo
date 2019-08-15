@@ -3,7 +3,7 @@ export class SnackBarLoadingModel {
     // Angular mandatory snackbar properties
     public announcementMessage?: string,
     public data?: SnackBarDataModel,
-    public hasAction?: false,
+    public hasAction?: boolean,
     // Custom mandatory snackbar properties  
     public iconNames?: string[],
     public setIcon?: string,
@@ -12,7 +12,7 @@ export class SnackBarLoadingModel {
   ){ }
 }
 
-class SnackBarDataModel {
+export class SnackBarDataModel {
   constructor(
     public message?: string,
     public action?: string
