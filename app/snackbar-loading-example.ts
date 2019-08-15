@@ -41,11 +41,12 @@ export class SnackbarLoadingExample {
   template: `
     <div>
 
-      <mat-icon></mat-icon>{{message}}
-    </div>`
+      <mat-icon class="loading-spin">sync</mat-icon>{{message}}
+    </div>`,
+    styleUrls:['snackbar-loading-example.css']
 })
 export class LoadingSnackBar { 
-  message;
+  message = 'message';
 }
 
 
