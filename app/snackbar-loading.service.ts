@@ -1,7 +1,8 @@
 
 import {Injectable} from '@angular/core';
+import {}
 
 @Injectable()
-export class SnackBarLoadingService {
+export class SnackbarLoadingComponent {
   constructor(){}
 }

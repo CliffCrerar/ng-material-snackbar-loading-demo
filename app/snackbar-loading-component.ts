@@ -6,11 +6,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
  * @title Basic snack-bar
  */
 @Component({
-  selector: 'snackbar-loading-example',
-  templateUrl: 'snackbar-loading-example.html',
-  styleUrls: ['snackbar-loading-example.css'],
+  selector: 'snackbar-loading-component',
+  templateUrl: 'snackbar-loading-component.html',
+  styleUrls: ['snackbar-loading-component.css'],
 })
-export class SnackbarLoadingExample {
+export class SnackbarLoadingComponent {
   icons: string[] = ['sync', 'donut_large', 'settings_backup_restore', 'replay', 'sentiment_satisfied_alt', 'gps_fixed', 'gps_not_fixed', 'refresh', 'data_usage', 'rotate_right', 'rotate_left', 'filter_tilt_shift']
   selected: string;
 
