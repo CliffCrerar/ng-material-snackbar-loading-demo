@@ -9,7 +9,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './material-module';
 import {SnackbarLoadingComponent,LoadingSnackBar} from './app/snackbar-loading-component';
-
+import {SnackbarLoadingService} from './app/snackbar-loading.service.ts';
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import {SnackbarLoadingComponent,LoadingSnackBar} from './app/snackbar-loading-c
   entryComponents: [SnackbarLoadingComponent,LoadingSnackBar],
   declarations: [SnackbarLoadingComponent,LoadingSnackBar],
   bootstrap: [SnackbarLoadingComponent],
-  providers: []
+  providers: [SnackbarLoadingService]
 })
 export class AppModule {}
 
