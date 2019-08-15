@@ -13,17 +13,14 @@
 <mat-grid-list cols="4" rowHeight="2:1">
 	<mat-radio-group formControlName="floatLabel">
 		<mat-grid-tile *ngFor="let icon of icons">
-			<mat-radio-button value="auto">
+      <mat-card>
+			<mat-radio-button value="{{icon}}">
 				<mat-icon>{{icon}}</mat-icon>
 			</mat-radio-button>
+      </mat-card>
 		</mat-grid-tile>
 	</mat-radio-group>
 </mat-grid-list>
-
-<div *ngFor="let icon of icons">
-
-</div>
-
 
 <br>
 
