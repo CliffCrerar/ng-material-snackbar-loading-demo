@@ -18,18 +18,20 @@ export class SnackbarLoadingExample {
   openNormalSnackBar() {
     const message = "Updating"
     const action = "go away"
-    this._snackBar.open(message, action, {/*duration: 2000,*/});
+    this._snackBar.open(message, action, {
+      //duration: 2000,
+    });
   }
 
   openLoadingSnackBar(){
     const message = "Updating"
     const action = "go away"
-
-    this._snackBar.openWithComponent(new LoadingSnackBar, {/*duration: 2000*/});
+    this._snackBar.openFromComponent(LoadingSnackBar);
   }
 
   onRadioChange(event) {
     console.log(event.value);
+    
   }
 
 }
