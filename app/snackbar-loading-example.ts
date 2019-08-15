@@ -15,6 +15,7 @@ export class SnackbarLoadingExample {
   selected: string;
 
   constructor(private _snackBar: MatSnackBar) { }
+
   openNormalSnackBar() {
     const message = "Updating"
     const action = "go away"
@@ -32,7 +33,6 @@ export class SnackbarLoadingExample {
   onRadioChange(event) {
     console.log(event.value);
   }
-
 }
 
 @Component({
