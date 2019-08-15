@@ -7,25 +7,21 @@
 </mat-form-field> -->
 
 <style>
-
 </style>
 
-      <mat-radio-group formControlName="floatLabel">
-        <mat-radio-button value="auto">Auto</mat-radio-button>
-        <mat-radio-button value="always">Always</mat-radio-button>
-        <mat-radio-button value="never">Never</mat-radio-button>
-      </mat-radio-group>
 
 <mat-grid-list cols="4" rowHeight="2:1">
-  <mat-radio-group formControlName="floatLabel">
-    <mat-radio-button value="auto">Auto
-    <mat-grid-tile>1</mat-grid-tile>
-  </mat-radio-button>
-  </mat-radio-group>
+	<mat-radio-group formControlName="floatLabel">
+		<mat-grid-tile *ngFor="let icon of icons">
+			<mat-radio-button value="auto">
+				<mat-icon>{{icon}}</mat-icon>
+			</mat-radio-button>
+		</mat-grid-tile>
+	</mat-radio-group>
 </mat-grid-list>
 
 <div *ngFor="let icon of icons">
-  <mat-icon>{{icon}}</mat-icon>
+
 </div>
 
 
