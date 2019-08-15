@@ -41,7 +41,7 @@ export class SnackbarLoadingComponent {
     <div>
       <mat-icon class="loading-spin">sync</mat-icon>{{message}}
     </div>`,
-    styleUrls:['snackbar-loading-example.css']
+    styleUrls:['snackbar-loading-component.css']
 })
 export class LoadingSnackBar { 
   message = 'message';
