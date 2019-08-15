@@ -1,6 +1,6 @@
 export class SnackBarLoadingModel {
   
-  
+  public errorIcon = 'sync_problem';
   constructor(
     // Angular mandatory snackbar properties
     public announcementMessage: string = 'I am announcing!',
