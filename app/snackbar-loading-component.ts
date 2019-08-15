@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,NgOninit} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
 import {SnackbarLoadingService} from './snackbar-loading.service'
@@ -10,17 +10,21 @@ import {SnackbarLoadingService} from './snackbar-loading.service'
   templateUrl: 'snackbar-loading-component.html',
   styleUrls: ['snackbar-loading-component.css'],
 })
-export class SnackbarLoadingComponent {
-  icons: string[] = ['sync', 'donut_large', 'settings_backup_restore', 'replay', 'sentiment_satisfied_alt', 'gps_fixed', 'gps_not_fixed', 'refresh', 'data_usage', 'rotate_right', 'rotate_left', 'filter_tilt_shift']
-  selected: string;
+export class SnackbarLoadingComponent implements NgOninit {
 
   constructor(
     private _snackBar: MatSnackBar,
     private loadingService: SnackbarLoadingService
     ) { 
-      console.log(loadingService)
-      this.loadingService.iconNames = this.icons;
+      
+      
     }
+
+  ngOnInit(){
+    this.loadingService.snackBarData.iconNames = this.icons;
+    this.loadingService.snackBarData.setIcon = this.icons[0];
+    
+  }
 
   openNormalSnackBar() {
     const message = "Updating"
@@ -45,7 +49,7 @@ export class SnackbarLoadingComponent {
   selector: `snackbar-loading`,
   template: `
     <div>
-      <mat-icon class="loading-spin">sync</mat-icon>{{message}}
+      <mat-icon class="loading-spin" [innerHTML]="loadingService.setIcon"></mat-icon>{{message}}
     </div>`,
     styleUrls:['snackbar-loading-component.css']
 })
