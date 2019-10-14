@@ -21,10 +21,15 @@
 </mat-grid-list>
 
 <!-- <h4>selected spinner: {{}}</h4> -->
+<div class="message-input">
+    <mat-form-field class="example-full-width">
+    <input matInput placeholder="type a message here" [(ngModel)]="inputValue" (onchange)="onMessagInput()">
+  </mat-form-field>
+</div>
 
-<button style="margin-top: 1vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
+<button style="margin-top: 0vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
 
-<button style="margin-top: 100px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading-bar</button>
+<button style="margin-top: 20px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading-bar</button>
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
