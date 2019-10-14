@@ -22,9 +22,16 @@
 
 <!-- <h4>selected spinner: {{}}</h4> -->
 <div class="message-input">
+  <form>
     <mat-form-field class="example-full-width">
-    <input matInput placeholder="type a message here" [(ngModel)]="inputValue" (onchange)="onMessagInput()">
+    <input 
+      name="msg" 
+      matInput 
+      placeholder="type a message here" 
+      [(ngModel)]="inputValue" 
+      (onchange)="onMessagInput()">
   </mat-form-field>
+  </form>
 </div>
 
 <button style="margin-top: 0vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>

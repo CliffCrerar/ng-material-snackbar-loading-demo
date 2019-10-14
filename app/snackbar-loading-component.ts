@@ -21,7 +21,7 @@ export class SnackbarLoadingComponent implements NgOninit {
     ) { 
       this.snackbarData = this.loadingService.snackBarData;
       this.icons=this.snackbarData.iconNames;
-      this.inputValue = this.snackbarData.message;
+      this.inputValue = this.snackbarData.data.message;
     }
 
   ngOnInit(){
@@ -49,9 +49,9 @@ export class SnackbarLoadingComponent implements NgOninit {
   }
 
   onMessagInput(){
-    this.inputValue;
+    
     console.log(this.inputValue);
-    this.snackbarData.message = this.inputValue;
+    this.snackbarData.data.message = this.inputValue;
   }
 }
 
@@ -64,7 +64,7 @@ export class SnackbarLoadingComponent implements NgOninit {
         class="loading-spin" 
         [innerHTML]="this.snackbarData.setIcon"></mat-icon>
       </div>
-      <div class="snackbar-message">{{snackbarData.message}}</div>
+      <div class="snackbar-message">{{snackbarData.data.message}}</div>
     </div>`,
     styleUrls:['snackbar-loading-component.css']
 })
