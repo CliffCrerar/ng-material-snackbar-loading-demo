@@ -5,6 +5,20 @@ body{
   background: blue !important;
 }
 
+.flex-container-row{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.snackbar-message{
+  padding-left: 10px;
+}
+
+.message-input{
+  padding: 20px;
+}
+
 	.loading-spin {
 		animation: spinning 2s linear infinite;
 	}
