@@ -74,7 +74,7 @@ export class LoadingSnackBar {
   constructor(private loadingService: SnackbarLoadingService){
     
     this.snackbarData = this.loadingService.snackBarData;
-    console.log(this.snackbarData.message)
+    console.log(this.snackbarData.data.message)
   }
 }
 
