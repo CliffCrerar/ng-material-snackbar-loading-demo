@@ -7,7 +7,7 @@ export class SnackBarLoadingModel {
     public hasAction?: boolean,
     // Custom mandatory snackbar properties  
     public setIcon?: string,
-    public direction: string = 'loading-spint-clock-wise',
+    public direction: string = 'loading-spin-clock-wise',
     // Angular optional snackbar properties
     public errorIcon?: string
   ){ }

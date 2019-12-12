@@ -45,7 +45,7 @@ export class SnackbarLoadingComponent implements NgOninit {
   }
 
   closeLoadingSnackBar(){
-    this._snackBar.close();
+    this._snackBar.dismiss();
   }
 
   onRadioChange(event) {
@@ -54,13 +54,13 @@ export class SnackbarLoadingComponent implements NgOninit {
   }
 
   onMessagInput(){
-    
     console.log(this.inputValue);
     this.snackbarData.data.message = this.inputValue;
   }
 
   onToggleChange(ev: Event<MatButtonToggleChange>):void{
     console.log(ev);
+    this.snackbarData.direction = ev.value;
   }
 }
 
@@ -70,7 +70,7 @@ export class SnackbarLoadingComponent implements NgOninit {
     <div class="flex-container-row">
     <div>
       <mat-icon 
-        class="loading-spin-clockwise" 
+        [ngClass]="spinning" 
         [innerHTML]="this.snackbarData.setIcon"></mat-icon>
       </div>
       <div class="snackbar-message">{{snackbarData.data.message}}</div>
