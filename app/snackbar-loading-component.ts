@@ -15,6 +15,7 @@ export class SnackbarLoadingComponent implements NgOninit {
   icons: string[];
   snackbarData: SnackBarLoadingModel;
   inputValue: string;
+  
   constructor(
     private _snackBar: MatSnackBar,
     private loadingService: SnackbarLoadingService
