@@ -7,7 +7,7 @@
 </mat-form-field> -->
 
 <h2>Select a spinner</h2>
-
+<div class="grid-list">
 <mat-grid-list cols="4" rowHeight="2:1">
 	<mat-radio-group>
 		<mat-grid-tile *ngFor="let icon of icons">
@@ -19,6 +19,7 @@
 		</mat-grid-tile>
 	</mat-radio-group>
 </mat-grid-list>
+</div>
 
 <!-- <h4>selected spinner: {{}}</h4> -->
 <div class="message-input" hidden> 
@@ -38,9 +39,11 @@
 
 <button style="margin-top: 20px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading-bar</button>
 <div class="toggle-buttons">
+
+  <h2>Direction:</h2>
 <mat-button-toggle-group (change)="onToggleChange($event)" name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle value="italic">Italic</mat-button-toggle>
-  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  <mat-button-toggle value="loading-spin-clockwise">Clock wise</mat-button-toggle>
+  <mat-button-toggle value="loading-spin-clockwise">Anti Clock Wise</mat-button-toggle>
 </mat-button-toggle-group>
 </div>
 

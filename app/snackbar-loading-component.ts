@@ -74,6 +74,7 @@ export class SnackbarLoadingComponent implements NgOninit {
 })
 export class LoadingSnackBar { 
   message = 'message';
+  spinning = 'loading-spin-clockwise';
   snackbarData: SnackBarLoadingModel;
   constructor(private loadingService: SnackbarLoadingService){
     

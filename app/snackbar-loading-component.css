@@ -11,11 +11,17 @@ body{
   align-items: center;
 }
 
+
+.grid-list{
+  padding: 20px;
+}
+
 .snackbar-message{
   padding-left: 10px;
 }
 
 .message-input{
+
   padding: 20px;
 }
 
