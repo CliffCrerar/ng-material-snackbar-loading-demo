@@ -44,6 +44,10 @@ export class SnackbarLoadingComponent implements NgOninit {
     this._snackBar.openFromComponent(LoadingSnackBar);
   }
 
+  closeLoadingSnackBar(){
+    this._snackBar.close();
+  }
+
   onRadioChange(event) {
     console.log(event.value);
     this.snackbarData.setIcon = event.value;
