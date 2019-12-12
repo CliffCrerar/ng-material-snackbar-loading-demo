@@ -37,6 +37,12 @@
 <button style="margin-top: 0vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal-bar</button>
 
 <button style="margin-top: 20px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading-bar</button>
+<div class="toggle-buttons">
+<mat-button-toggle-group (change)="onToggleChange($event)" name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+</div>
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

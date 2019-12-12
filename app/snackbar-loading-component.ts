@@ -1,4 +1,4 @@
-import { Component ,NgOninit} from '@angular/core';
+import { Component ,NgOninit, Event} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
 import {SnackbarLoadingService} from './snackbar-loading.service'
@@ -53,6 +53,10 @@ export class SnackbarLoadingComponent implements NgOninit {
     console.log(this.inputValue);
     this.snackbarData.data.message = this.inputValue;
   }
+
+  onToggleChange(ev: Event<MatButtonToggleChange>):void{
+    console.log(ev);
+  }
 }
 
 @Component({
@@ -61,7 +65,7 @@ export class SnackbarLoadingComponent implements NgOninit {
     <div class="flex-container-row">
     <div>
       <mat-icon 
-        class="loading-spin" 
+        class="loading-spin-clockwise" 
         [innerHTML]="this.snackbarData.setIcon"></mat-icon>
       </div>
       <div class="snackbar-message">{{snackbarData.data.message}}</div>

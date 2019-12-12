@@ -19,11 +19,20 @@ body{
   padding: 20px;
 }
 
-	.loading-spin {
-		animation: spinning 2s linear infinite;
+.toggle-buttons{
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+	.loading-spin-clockwise {
+		animation: spinning-clock-wise 2s linear infinite;
 	}
 
-	@keyframes spinning {
+  	.loading-spin-anti-clockwise {
+		animation: spinning-clock-wise 2s linear infinite;
+	}
+
+	@keyframes spinning-clock-wise {
 		0% {
 			transform: rotate(0);
 		}
@@ -38,6 +47,25 @@ body{
 		}
 		100% {
 			transform: rotate(360deg);
+		}
+
+	}
+
+  	@keyframes spinning-anti-clock-wise {
+		0% {
+			transform: rotate(360deg);
+		}
+		25% {
+			transform: rotate(270deg);
+		}
+		50% {
+			transform: rotate(180deg);
+		}
+		75% {
+			transform: rotate(90deg);
+		}
+		100% {
+			transform: rotate(0deg);
 		}
 
 	}
