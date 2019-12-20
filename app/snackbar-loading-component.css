@@ -35,7 +35,7 @@ body{
 	}
 
   	.loading-spin-anti-clockwise {
-		animation: spinning-clock-wise 2s linear infinite;
+		animation: spinning-clock-anti-wise 2s linear infinite;
 	}
 
 	@keyframes spinning-clock-wise {

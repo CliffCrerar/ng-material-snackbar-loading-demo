@@ -70,8 +70,8 @@ export class SnackbarLoadingComponent implements NgOninit {
     <div class="flex-container-row">
     <div>
       <mat-icon 
-        [ngClass]="spinning" 
-        [innerHTML]="this.snackbarData.setIcon"></mat-icon>
+        [ngClass]="snackbarData.direction" 
+        [innerHTML]="snackbarData.setIcon"></mat-icon>
       </div>
       <div class="snackbar-message">{{snackbarData.data.message}}</div>
     </div>`,
@@ -79,10 +79,8 @@ export class SnackbarLoadingComponent implements NgOninit {
 })
 export class LoadingSnackBar { 
   message = 'message';
-  spinning = 'loading-spin-anti-clockwise';
   snackbarData: SnackBarLoadingModel;
   constructor(private loadingService: SnackbarLoadingService){
-    
     this.snackbarData = this.loadingService.snackBarData;
     console.log(this.snackbarData.data.message)
   }
