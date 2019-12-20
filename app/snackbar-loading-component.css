@@ -30,12 +30,17 @@ body{
   margin: 10px 0 0 0;
 }
 
+main{
+  max-width: 600px;
+  min-width: 320px;
+}
+
 	.loading-spin-clockwise {
 		animation: spinning-clock-wise 2s linear infinite;
 	}
 
   	.loading-spin-anti-clockwise {
-		animation: spinning-clock-wise 2s linear infinite;
+		animation: spinning-anti-clock-wise 2s linear infinite;
 	}
 
 	@keyframes spinning-clock-wise {

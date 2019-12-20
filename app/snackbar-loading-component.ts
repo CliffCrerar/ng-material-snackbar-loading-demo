@@ -1,4 +1,4 @@
-import { Component ,NgOninit, Event} from '@angular/core';
+import { Component, OnInit, Event } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
 import {SnackbarLoadingService} from './snackbar-loading.service'
@@ -11,7 +11,7 @@ import {SnackBarLoadingModel} from './snackbar-loading.model'
   templateUrl: 'snackbar-loading-component.html',
   styleUrls: ['snackbar-loading-component.css'],
 })
-export class SnackbarLoadingComponent implements NgOninit {
+export class SnackbarLoadingComponent implements OnInit {
   icons: string[];
   snackbarData: SnackBarLoadingModel;
   inputValue: string;
@@ -44,19 +44,23 @@ export class SnackbarLoadingComponent implements NgOninit {
     this._snackBar.openFromComponent(LoadingSnackBar);
   }
 
+  closeLoadingSnackBar(){
+    this._snackBar.dismiss();
+  }
+
   onRadioChange(event) {
     console.log(event.value);
     this.snackbarData.setIcon = event.value;
   }
 
   onMessagInput(){
-    
     console.log(this.inputValue);
     this.snackbarData.data.message = this.inputValue;
   }
 
   onToggleChange(ev: Event<MatButtonToggleChange>):void{
     console.log(ev);
+    this.snackbarData.direction = ev.value;
   }
 }
 
@@ -66,8 +70,8 @@ export class SnackbarLoadingComponent implements NgOninit {
     <div class="flex-container-row">
     <div>
       <mat-icon 
-        class="loading-spin-clockwise" 
-        [innerHTML]="this.snackbarData.setIcon"></mat-icon>
+        [ngClass]="snackbarData.direction" 
+        [innerHTML]="snackbarData.setIcon"></mat-icon>
       </div>
       <div class="snackbar-message">{{snackbarData.data.message}}</div>
     </div>`,
@@ -75,12 +79,10 @@ export class SnackbarLoadingComponent implements NgOninit {
 })
 export class LoadingSnackBar { 
   message = 'message';
-  spinning = 'loading-spin-clockwise';
   snackbarData: SnackBarLoadingModel;
   constructor(private loadingService: SnackbarLoadingService){
-    
     this.snackbarData = this.loadingService.snackBarData;
-    console.log(this.snackbarData.data.message)
+    // console.log(this.snackbarData.data.message)
   }
 }
 
