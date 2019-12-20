@@ -1,4 +1,4 @@
-import { Component ,NgOninit, Event} from '@angular/core';
+import { Component, OnInit, Event } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import {MatIconModule} from '@angular/material/icon';
 import {SnackbarLoadingService} from './snackbar-loading.service'
@@ -11,7 +11,7 @@ import {SnackBarLoadingModel} from './snackbar-loading.model'
   templateUrl: 'snackbar-loading-component.html',
   styleUrls: ['snackbar-loading-component.css'],
 })
-export class SnackbarLoadingComponent implements NgOninit {
+export class SnackbarLoadingComponent implements OnInit {
   icons: string[];
   snackbarData: SnackBarLoadingModel;
   inputValue: string;
@@ -82,7 +82,7 @@ export class LoadingSnackBar {
   snackbarData: SnackBarLoadingModel;
   constructor(private loadingService: SnackbarLoadingService){
     this.snackbarData = this.loadingService.snackBarData;
-    console.log(this.snackbarData.data.message)
+    // console.log(this.snackbarData.data.message)
   }
 }
 

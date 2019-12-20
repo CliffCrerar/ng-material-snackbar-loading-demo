@@ -16,7 +16,7 @@ export class SnackbarLoadingService {
       'announcementMessage',
       false, 
       'sync_problem',
-      'spinning-clock-wise',
+      'loading-spin-anti-clockwise',
       this.icons[0]
     )
   }

@@ -6,48 +6,57 @@
   <input matInput value="Dance" placeholder="Action" #action>
 </mat-form-field> -->
 
-<h2>Select a spinner</h2>
-<div class="grid-list">
-<mat-grid-list cols="4" rowHeight="2:1">
-	<mat-radio-group>
-		<mat-grid-tile *ngFor="let icon of icons">
-			<mat-card>
-				<mat-radio-button value="{{icon}}" (change)="onRadioChange($event)">
-					<mat-icon>{{icon}}</mat-icon>
-				</mat-radio-button>
-			</mat-card>
-		</mat-grid-tile>
-	</mat-radio-group>
-</mat-grid-list>
-</div>
+<main>
+  <h2>Select a spinner</h2>
+  <div class="grid-list">
+    <mat-grid-list cols="4" rowHeight="2:1">
+      <mat-radio-group>
+        <mat-grid-tile *ngFor="let icon of icons">
+          <mat-card>
+            <mat-radio-button value="{{icon}}" (change)="onRadioChange($event)">
+              <mat-icon>{{icon}}</mat-icon>
+            </mat-radio-button>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-radio-group>
+    </mat-grid-list>
+  </div>
 
-<!-- <h4>selected spinner: {{}}</h4> -->
-<div class="message-input" hidden> 
-  <form>
-    <mat-form-field class="example-full-width">
-    <input 
-      name="msg" 
-      matInput 
-      placeholder="type a message here" 
-      [(ngModel)]="inputValue" 
-      (onchange)="onMessagInput()">
-  </mat-form-field>
-  </form>
-</div>
+  <!-- <h4>selected spinner: {{}}</h4> -->
+  <div class="message-input" hidden> 
+    <form>
+      <mat-form-field class="example-full-width">
+      <input 
+        name="msg" 
+        matInput 
+        placeholder="type a message here" 
+        [(ngModel)]="inputValue" 
+        (onchange)="onMessagInput()">
+    </mat-form-field>
+    </form>
+  </div>
 
+  
+<div>
 <button style="margin-top: 0vh" mat-button mat-raised-button color="primary" (click)="openNormalSnackBar()">Show normal snackbar</button>
 
 <button style="margin-top: 20px; margin-left: 3vw" mat-button mat-raised-button color="accent" (click)="openLoadingSnackBar()">Show loading snackbar</button>
 
   <button style="margin-top: 20px; margin-left: 3vw" mat-button mat-raised-button color="basic" (click)="closeLoadingSnackBar()">Dismiss Loading snackbar</button>
+</div>
+
+
 <div class="toggle-buttons">
 
-  <h2>Direction:</h2>
-<mat-button-toggle-group (change)="onToggleChange($event)" name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle value="loading-spin-clockwise">Clock wise</mat-button-toggle>
-  <mat-button-toggle value="loading-spin-anti-clockwise">Anti Clock Wise</mat-button-toggle>
-</mat-button-toggle-group>
+<h2>Direction:</h2>
+  <mat-button-toggle-group (change)="onToggleChange($event)" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="loading-spin-clockwise">Clock wise</mat-button-toggle>
+    <mat-button-toggle value="loading-spin-anti-clockwise">Anti Clock Wise</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
+
+</main>
+
 
 <!-- Copyright 2019 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
