@@ -33,6 +33,7 @@ body{
 main{
   max-width: 600px;
   min-width: 320px;
+  margin: auto;
 }
 
 	.loading-spin-clockwise {
