@@ -1,5 +1,10 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+html,body{
+  min-height: 100vh;
+  height: auto;
+}
+
 body { 
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
